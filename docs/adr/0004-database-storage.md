@@ -1,16 +1,10 @@
 # Architecture Decision Record: Database Storage
 
 ## Summary
-* **Issue:** How to store high scores and user settings locally in React Native.
-* **Decision:** **AsyncStorage**
+* **Issue:** Choosing a method for persistent local data storage.
+* **Decision:** **Ionic Storage (Key-Value)**
 * **Status:** Accepted
 
 ## Details
-* **Assumptions:** Data is simple, non-sensitive, and needs to be saved locally on the device.
-* **Constraints:** Must be easy to implement within the project scope without a complex database engine.
-* **Positions:** SQLite, Realm, Firebase (Remote).
-* **Argument:** **AsyncStorage** is the standard for simple key-value storage in React Native. It is perfect for saving high scores and usernames locally. It fits our project's **Scope** perfectly as it doesn't require setting up a heavy database or an external server.
-* **Implications:** Data is stored as strings, so we will need to use `JSON.stringify` and `JSON.parse` for object data.
-
-## Related
-* **Related decisions:** Development Framework (React Native).
+* **Argument:** We will use **Ionic Storage**, which provides a simple way to store data like high scores and player preferences locally on the Android device. It is more robust than standard Web LocalStorage and fits perfectly within the course **Scope**, as it doesn't require a complex cloud setup.
+* **Implications:** Data will be stored in a key-value format using TypeScript interfaces for type safety.
