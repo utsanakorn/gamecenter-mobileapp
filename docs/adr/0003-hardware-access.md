@@ -17,4 +17,4 @@
 * **Implications**: We will use Capacitor plugins to access the Haptics and Native Audio APIs on the Android device.
 
 ## Related
-Related requirements: User Experience (UX) goals.
+* Related requirements: User Experience (UX) goals.
