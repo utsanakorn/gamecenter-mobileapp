@@ -1,16 +1,10 @@
 # Architecture Decision Record: Navigation Strategy
 
 ## Summary
-* **Issue:** How users will navigate between game modules and menus in a React Native environment.
-* **Decision:** **React Navigation (Tab and Stack)**
+* **Issue:** Design a navigation system for the game hub.
+* **Decision:** **Ionic Tabs and IonRouter (Stack Navigation)**
 * **Status:** Accepted
 
 ## Details
-* **Assumptions:** The app requires a smooth transition between the game library and individual gameplay screens.
-* **Constraints:** Must follow the standard Android back-button behavior.
-* **Positions:** Drawer Navigation, Single-page state switching.
-* **Argument:** We will use the **React Navigation** library, specifically combining **Bottom Tab Navigation** for the main sections (Home, Games, Scores) and **Stack Navigation** for moving between the game list and the active game session. This provides the most "native" user experience on Android.
-* **Implications:** Requires installation of `@react-navigation/native` and associated dependencies.
-
-## Related
-* **Related decisions:** Development Framework (React Native).
+* **Argument:** We will use **Ionic Tabs** for the primary navigation (Home, Game List, Scores). For entering individual games, we will use the **IonRouterOutlet**, which provides a native-like "Stack" transition on Android. This allows users to navigate back and forth between the menu and the games (Quiz/Tic Tac Toe) seamlessly.
+* **Implications:** Navigation will be handled by `react-router-dom`, integrated with Ionic's lifecycle.
