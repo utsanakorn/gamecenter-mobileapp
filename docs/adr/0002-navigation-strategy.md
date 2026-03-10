@@ -10,4 +10,4 @@
 * **Implications:** We need to implement a routing system (like Ionic Router) to manage the history of the "back" button on Android.
 
 ## Related
-* ** Related decisions: Development Framework (Ionic Router).
+* Related decisions: Development Framework (Ionic Router).
