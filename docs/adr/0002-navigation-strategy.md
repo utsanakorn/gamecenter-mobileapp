@@ -1,10 +1,12 @@
 # Architecture Decision Record: Navigation Strategy
 
 ## Summary
-* **Issue:** Design a navigation system for the game hub.
-* **Decision:** **Ionic Tabs and IonRouter (Stack Navigation)**
+* **Issue:** **How users will navigate between different games and menus within GameCenter.**
+* **Decision:** **Tab Bar with Stack Navigation**
 * **Status:** Accepted
 
 ## Details
-* **Argument:** We will use **Ionic Tabs** for the primary navigation (Home, Game List, Scores). For entering individual games, we will use the **IonRouterOutlet**, which provides a native-like "Stack" transition on Android. This allows users to navigate back and forth between the menu and the games (Quiz/Tic Tac Toe) seamlessly.
-* **Implications:** Navigation will be handled by `react-router-dom`, integrated with Ionic's lifecycle.
+* **Argument:** A Tab Bar (Bottom Navigation) provides quick access to core sections: "Home", "Games", and "Scores". Inside each game, Stack Navigation will be used to allow users to go "into" a game and "back" to the main list. This is the industry standard for mobile gaming hubs.
+* **Implications:** We need to implement a routing system (like Ionic Router) to manage the history of the "back" button on Android.
+
+* **Related** Related decisions: Development Framework (Ionic Router).
