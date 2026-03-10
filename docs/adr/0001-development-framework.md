@@ -1,17 +1,16 @@
 # Architecture Decision Record: Development Framework
 
 ## Summary
-* **Issue:** Selecting a mobile development framework for "GameCenter" that supports Android and fits the team's skillset.
-* **Decision:** **React Native**
+* **Issue:** Selecting a mobile framework for "GameCenter" that supports React, TypeScript, and Bootstrap.
+* **Decision:** **Ionic Framework (React + TypeScript)**
 * **Status:** Accepted
 
 ## Details
-* **Assumptions:** The team wants to build a high-performance app with a native feel and has an interest in the React ecosystem.
-* **Constraints:** Must be compatible with Android OS and allow for the integration of styling libraries.
-* **Positions:** Ionic, Cordova, Framework7, Native Script.
-* **Argument:** **React Native** is selected because it provides a "Learn once, write anywhere" advantage and offers superior performance by rendering native components instead of web views. While the project requires Bootstrap, we will use libraries like `react-native-bootstrap` or styled-components to mirror the Bootstrap design language effectively on a native platform.
-* **Implications:** The team will need to manage the React state efficiently and ensure that native modules are correctly linked for Android.
+* **Assumptions:** The team will use React and TypeScript as taught in class, while needing to integrate Bootstrap CSS for the UI.
+* **Constraints:** Must be a functional Android app and use the Bootstrap framework.
+* **Positions:** React Native, Cordova, Flutter.
+* **Argument:** We selected **Ionic** because it is a hybrid framework that allows us to write standard **React and TypeScript** code while fully supporting **Bootstrap CSS**. Unlike React Native, Ionic uses web standards, meaning we can import the official Bootstrap library directly without any compatibility issues. This ensures we meet all project requirements efficiently.
+* **Implications:** We will use Capacitor to deploy the app to Android devices.
 
 ## Related
-* **Related decisions:** Navigation Strategy, Hardware Access.
-* **Related requirements:** Target Device: Android, CSS Framework: Bootstrap (Implementation via React Native styling).
+* **Related requirements:** Android Target, Bootstrap CSS Framework, TypeScript.
